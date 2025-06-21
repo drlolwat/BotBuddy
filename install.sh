@@ -19,7 +19,7 @@ git clone http://gitlab.botbuddy.net/botbuddy/goagent
 git clone http://gitlab.botbuddy.net/botbuddy/scriptwrapper
 
 cp .env.example .env
-read -s -p "Enter a password for the MySQL database: " MYSQL_PASSWORD
+read -p "Enter a password for the MySQL database: " MYSQL_PASSWORD
 echo
 
 sed -i '' "s/^DB_PASSWORD=.*/DB_PASSWORD=${MYSQL_PASSWORD}/" .env 2>/dev/null || \
