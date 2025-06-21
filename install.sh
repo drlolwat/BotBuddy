@@ -27,7 +27,7 @@ sed -i "s/^DB_PASSWORD=.*/DB_PASSWORD=${MYSQL_PASSWORD}/" .env
 
 docker compose up -d
 
-docker compose exec php sh -c "cd /var/www/html/scriptwrapper && mvn clean package && mv target/BotBuddyWrapper-2.0.jar /var/www/html/public/"
+docker compose exec php sh -c "cd /var/www/html/scriptwrapper && mvn clean package && mv /var/www/html/scriptwrapper/Dreambot/Scripts/BotBuddyWrapper-2.0-nodist.jar /var/www/html/public/BotBuddyWrapper-2.0-dist.jar"
 
 docker compose exec php php artisan key:generate
 
