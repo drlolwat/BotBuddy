@@ -12,7 +12,15 @@ Discord: https://discord.gg/MN5JytKrje
 
 Installation scripts for Linux and Windows environments are available. If you have any issues installing BotBuddy, feel free to join our Discord server for support.
 
-1. Clone the repository & move into the directory
+## Projects
+| Project  | Description                                                                                                                                                                                        |
+|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| web      | Laravel backend primarily using Blade for server-side rendering. Serves as the central interface for bot management. JavaScript is used minimally, with a mix of vanilla JS, React, and Inertia.js |
+| gomaster | Go-based command dispatcher and sync server. Receives updates from agents and forwards instructions from the web application to the appropriate agent clients                                      |
+| goagent  | Go client that acts as a bridge between the master server and DreamBot instances. It executes commands from the master and forwards telemetry from the script wrapper to the master                |
+| scriptwrapper | DreamBot script that collects runtime telemetry and sends it to the agent for processing and reporting                                                                                        |
+1. 
+2. Clone the repository & move into the directory
 
 ```bash
 git clone https://gitlab.botbuddy.net/botbuddy/botbuddy.git
