@@ -15,6 +15,7 @@ Discord: https://discord.gg/MN5JytKrje
 ## Requirements
 - Git
 - Docker
+- Python (3.12.2 or similar - for Jagex account linking)
 
 ## Installation
 
