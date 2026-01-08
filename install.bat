@@ -4,8 +4,8 @@ setlocal EnableDelayedExpansion
 where git >nul 2>&1 || (echo git not found && exit /b 1)
 where docker >nul 2>&1 || (echo docker not found && exit /b 1)
 
-git clone https://gitlab.botbuddy.net/botbuddy/web
-cd web
+git clone https://github.com/drlolwat/BotBuddyWeb
+cd BotBuddyWeb
 
 docker run --rm -it ^
     -v %cd%:/var/www/html ^
@@ -13,9 +13,9 @@ docker run --rm -it ^
     laravelsail/php84-composer:latest ^
     composer install --ignore-platform-reqs
 
-git clone http://gitlab.botbuddy.net/botbuddy/gomaster
-git clone http://gitlab.botbuddy.net/botbuddy/goagent
-git clone http://gitlab.botbuddy.net/botbuddy/scriptwrapper
+git clone https://github.com/drlolwat/GoMaster
+git clone https://github.com/drlolwat/GoAgent
+git clone https://github.com/drlolwat/ScriptWrapper
 
 copy .env.example .env
 
