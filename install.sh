@@ -4,8 +4,8 @@ set -e
 command -v git >/dev/null || { echo "git not found"; exit 1; }
 command -v docker >/dev/null || { echo "docker not found"; exit 1; }
 
-git clone https://gitlab.botbuddy.net/botbuddy/web
-cd web
+git clone https://github.com/drlolwat/BotBuddyWeb
+cd BotBuddyWeb
 
 docker run --rm -it \
     -u "$(id -u):$(id -g)" \
@@ -14,9 +14,9 @@ docker run --rm -it \
     laravelsail/php84-composer:latest \
     composer install --ignore-platform-reqs
 
-git clone http://gitlab.botbuddy.net/botbuddy/gomaster
-git clone http://gitlab.botbuddy.net/botbuddy/goagent
-git clone http://gitlab.botbuddy.net/botbuddy/scriptwrapper
+git clone https://github.com/drlolwat/GoMaster
+git clone https://github.com/drlolwat/GoAgent
+git clone https://github.com/drlolwat/ScriptWrapper
 
 cp .env.example .env
 read -p "Enter a password for the MySQL database: " MYSQL_PASSWORD
