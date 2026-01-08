@@ -24,7 +24,7 @@ Installation scripts for Linux and Windows environments are available. If you ha
 1. Clone the repository & move into the directory
 
 ```bash
-git clone https://gitlab.botbuddy.net/botbuddy/botbuddy.git
+git clone https://github.com/drlolwat/BotBuddy.git
 cd botbuddy
 ```
 
